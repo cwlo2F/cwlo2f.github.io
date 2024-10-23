@@ -9,15 +9,17 @@
  */
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Starter Blog`,
+    title: `cwlo2F`,
     author: {
-      name: `Kyle Mathews`,
-      summary: `who lives and works in San Francisco building useful things.`,
+      name: `김기수`,
+      name_eng: `Kisoo Kim`,
+      summary: `수학을 공부하는 작은 학생입니다.`,
     },
-    description: `A starter blog demonstrating what Gatsby can do.`,
-    siteUrl: `https://gatsbystarterblogsource.gatsbyjs.io/`,
+    description: `잡동사니 불로그`,
+    siteUrl: `https://cwlo2f.github.io/`,
     social: {
-      twitter: `kylemathews`,
+      email: `cwlo2F@gmail.com`,
+      // twitter: `kylemathews`,
     },
   },
   plugins: [
@@ -40,6 +42,12 @@ module.exports = {
       resolve: `gatsby-transformer-remark`,
       options: {
         plugins: [
+          {
+            resolve: `gatsby-remark-katex`,
+            options: {
+              strict: `ignore`
+            }
+          },
           {
             resolve: `gatsby-remark-images`,
             options: {
