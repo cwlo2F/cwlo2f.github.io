@@ -32,16 +32,18 @@ const Bio = () => {
 
   return (
     <div className="bio">
-      <StaticImage
-        className="bio-avatar"
-        layout="fixed"
-        formats={["auto", "webp", "avif"]}
-        src="../images/kisoo-kim.jpeg"
-        width={50}
-        height={50}
-        quality={95}
-        alt="Kisoo Kim's Profile picture"
-      />
+      <a href="/about">
+        <StaticImage
+          className="bio-avatar"
+          layout="fixed"
+          formats={["auto", "webp", "avif"]}
+          src="../images/kisoo-kim.jpeg"
+          width={50}
+          height={50}
+          quality={95}
+          alt="Kisoo Kim's profile picture"
+        />
+      </a>
       {author?.name && (
         <p>
           <strong>{author.name}</strong>는 {author.summary}
