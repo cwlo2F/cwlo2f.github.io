@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Infinitude of Primes
+description: "소수는 무한히 많이 있다."
 tags: Number-Theory
 date: 2022-03-24 00:27:01
 ---
@@ -54,7 +55,7 @@ $$N \le 2^k \sqrt{N} + \frac{1}{2} N$$
 
 위상수학을 사용한 이 증명은 수학자 퍼스턴버그가 학부생 때 떠올렸다고 전해진다.
 
-집합 $X$에 대해 $X$의 부분집합을 원소로 갖는 집합 $\mathcal{T}$가 다음 조건을 만족할 때, $\mathcal{T}$을 $X$의 위상이라고 한다.
+집합 $X$에 대해 $X$의 부분집합을 원소로 갖는 집합 $\mathcal{T}$가 다음 조건을 만족할 때, $\mathcal{T}$을 $X$의 위상<sup>topology</sup>이라고 한다.
 1. $\emptyset \in \mathcal{T}, X \in \mathcal{T}$
 2. 임의의 집합 $I$에 대해, $\forall i \in I.U_i \in \mathcal{T}$이면 $\bigcup_{i \in I} U_i \in \mathcal{T}$이다.
 3. 임의의 양의 정수 $n$에 대해, $\forall i \in \{1, 2, \cdots, n\}.U_i \in \mathcal{T}$이면 $\bigcap_{i = 1}^n U_i \in \mathcal{T}$이다.
@@ -74,10 +75,8 @@ $\mathcal{T}$가 위상임을 보이자.
    두 열린 집합 $\bigcup_{i_1 \in I_1} U_{a_{i_1}, b_{i_1}}$, $\bigcup_{i_2 \in I_2} U_{a_{i_2}, b_{i_2}}$의 교집합 $\bigcup_{(i_1, i_2) \in I_1 \times I_2} V_{i_1, i_2}$는 열린 집합이다. 
 
 
-
-이 위상에서 부분집합 $U$가 열린집합임과 닫힌집합임은 동치이다. 또한, 공집합이 아닌 열린집합은 항상 무한집합이다. 소인수분해의 존재에 의해, $\bigcup_{p \in \Pi} U_{0, p} = \mathbb{Z} \setminus \{-1, 1\}$이다. $\{-1, 1\}$은 유한집합이므로 열린집합이 아니고, 특히 $\mathbb{Z} \setminus \{-1, 1\}$은 닫힌집합이 아니다. $\Pi$가 유한하다고 가정하면 좌변은 닫힌집합의 유한합집합이므로 닫힌집합이고, 이때 등식은 닫힌집합과 닫히지 않은 집합이 같음을 의미하므로 (즉 어떤 집합 $U \subset \mathbb{Z}$에 대해 $\mathbb{Z} \setminus U \in \mathcal{T}$와 $\mathbb{Z} \setminus U \not\in \mathcal{T}$를 동시에 함의하므로) 모순이다. 
-
-## FLT와 Schur의 정리를 이용한 증명
-
-놀랍게도 페르마의 마지막 정리와 Schur의 정리가 참이면 소수는 무한히 많이 존재한다. 알려져 있는 FLT의 증명에서 소수의 무한성을 가정하는지는 모르겠다.
-
+이 위상에서 부분집합 $U$가 열린집합임과 닫힌집합임은 동치이다.
+또한, 공집합이 아닌 열린집합은 항상 무한집합이다. 소인수분해의 존재에 의해, $\bigcup_{p \in \Pi} U_{0, p} = \mathbb{Z} \setminus \{-1, 1\}$이다.
+$\{-1, 1\}$은 유한집합이므로 열린집합이 아니고, 특히 $\mathbb{Z} \setminus \{-1, 1\}$은 닫힌집합이 아니다. 
+$\Pi$가 유한하다고 가정하면 좌변은 닫힌집합의 유한합집합이므로 닫힌집합이고, 이때 등식은 닫힌집합과 닫히지 않은 집합이 같음을 의미하므로 
+(즉 어떤 집합 $U \subset \mathbb{Z}$에 대해 $\mathbb{Z} \setminus U \in \mathcal{T}$와 $\mathbb{Z} \setminus U \not\in \mathcal{T}$를 동시에 함의하므로) 모순이다. 
