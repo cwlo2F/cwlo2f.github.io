@@ -2,7 +2,8 @@
 layout: post
 title: Infinitude of Primes
 description: "소수는 무한히 많이 있다."
-tags: Number-Theory
+tags:
+ - Number-Theory
 date: 2022-03-24 00:27:01
 ---
 

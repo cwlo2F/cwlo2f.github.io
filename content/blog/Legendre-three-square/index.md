@@ -1,7 +1,8 @@
 ---
 layout: post
 title: Legendre's three-square theorem
-tags: Number-Theory
+tags: 
+ - Number-Theory
 date: 2020-08-18 04:00:00
 updated: 2021-06-24 23:59:58
 ---
