@@ -8,7 +8,7 @@ categories: Codeforces
 date: 2024-12-03 17:30:00
 ---
 
-# 콘테스트 기록
+## 콘테스트 기록
 
 A, B, C, D를 풀었다. E, F는 어려워 보인다. D에서 값 초기화 실수로 한 번 틀렸다.
 
@@ -16,20 +16,20 @@ A, B, C, D를 풀었다. E, F는 어려워 보인다. D에서 값 초기화 실�
 |:---:|:---:|:---:|:---:|:---:|:---:|
 |00:06|00:16|00:23|01:11|||
 
-# 2047A Alyona and a Square Jigsaw Puzzle
+## 2047A Alyona and a Square Jigsaw Puzzle
 
 퍼즐 조각 개수가 홀수 제곱수가 될 때 Alyona는 행복하다.
 
-# 2047B Replace Character
+## 2047B Replace Character
 
 가장 적게 있는 알파벳을 가장 많이 있는 알파벳으로 바꾼다. 왜 맞지???
 
-# 2046A Swap Columns and Find a Path
+## 2046A Swap Columns and Find a Path
 
 모든 열에 대해 적어도 한 칸은 합에 포함되고, 한 열은 두 칸이 모두 합에 포함된다.
 각 열에 대해 두 칸 중 큰 값을 모두 더한 다음, 남는 칸 중 가장 큰 것을 합하여 답을 얻는다.
 
-# 2046B Move Back at a Cost
+## 2046B Move Back at a Cost
 
 1. 조작이 끝났을 때 수열은 증가수열을 이룬다.
 2. 항을 뒤로 보내는 순서를 잘 맞출 수 있기 때문에 (왜???) 각 항은 많아야 한 번 뒤로 보내진다.
