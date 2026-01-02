@@ -8,7 +8,7 @@ import rehypeMathjax from 'rehype-mathjax';
 
 // https://astro.build/config
 export default defineConfig({
-	site: 'https://cwlo2F.github.io',
+	site: 'https://cwlo2f.github.io',
 	integrations: [mdx(), sitemap()],
 	markdown: {
 		remarkPlugins: [remarkMath],
