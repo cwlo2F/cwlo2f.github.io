@@ -1,20 +1,22 @@
 ---
 // import AboutHeroImage from "../assets/blog-placeholder-about.jpg"
+import { Image } from "astro:assets";
 const author = {
     name: "김기수",
     summary: "수학을 공부하는 작은 학생",
 };
 const email = "cwlo2F@gmail.com";
+import avatar from "../assets/kisoo-kim.jpeg";
 ---
 
 <div class="bio">
     <a href="/about" class="bio-link">
-        <img
+        <Image
             class="bio-avatar"
-            src="/images/kisoo-kim.jpeg"
+            src={avatar}
             width="50"
             height="50"
-            alt="Kisoo KIM's profile"
+            alt="Kisoo KIM"
             loading="lazy"
         />
     </a>
