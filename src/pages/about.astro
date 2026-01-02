@@ -1,31 +1,99 @@
 ---
-import AboutHeroImage from "../assets/blog-placeholder-about.jpg"
-import Layout from "../layouts/BlogPost.astro"
+import BaseHead from "../components/BaseHead.astro";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+import { SITE_TITLE } from "../consts";
 ---
 
-<Layout
-	title="About cwlo2F"
-	description="Lorem ipsum dolor sit amet"
-	pubDate={new Date("January 02 2026")}
-	heroImage={AboutHeroImage}
->
-	<p>
-		cwlo2F는 김기수가 아무렇게나 만든 이름입니다. 이전에 "틀리게" 만든
-		이름과 다르다는 성질을 가지고 있습니다. 이는 cwlo2F가 올바르게 만든
-		이름임을 함의하지 않습니다. GitHub 핸들과 같기도 하고, 어쨌든 블로그에
-		이름이 필요하기도 했고?
-	</p>
-	<p>주로 수학과 알고리즘 문제 해결에 관한 포스트를 남겼습니다.</p>
+<!doctype html>
+<html lang="ko">
+	<head>
+		<BaseHead title={`About | ${SITE_TITLE}`} description="cwlo2F 소개" />
+		<style>
+			.profile {
+				display: flex;
+				align-items: center;
+				gap: 1.5rem;
+				margin-bottom: 2rem;
+			}
+			.profile img {
+				width: 120px;
+				height: 120px;
+				border-radius: 50%;
+				object-fit: cover;
+			}
+			.profile-info h1 {
+				margin: 0 0 0.25rem 0;
+				font-size: 1.75rem;
+			}
+			.profile-info p {
+				margin: 0;
+				color: rgb(var(--gray));
+			}
+			section {
+				margin-bottom: 2rem;
+			}
+			section h2 {
+				margin-bottom: 0.75rem;
+				font-size: 1.25rem;
+			}
+			@media (max-width: 480px) {
+				.profile {
+					flex-direction: column;
+					text-align: center;
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<Header />
+		<main>
+			<div class="profile">
+				<img src="/images/kisoo-kim.jpeg" alt="Kisoo KIM" />
+				<div class="profile-info">
+					<h1>김기수 (Kisoo KIM)</h1>
+					<p>수학을 공부하는 작은 학생</p>
+				</div>
+			</div>
 
-	<h2>cwlo2F를 발음하는 방법</h2>
-	<p>
-		해시값을 발음하실 줄 아십니까? 저는 모르는데, 당분간은 계속 몰랐으면
-		합니다. 이래서 이름을 잘 지었어야 했는데.
-	</p>
+			<section>
+				<h2>About cwlo2F</h2>
+				<p>
+					cwlo2F는 김기수가 아무렇게나 만든 이름입니다. 이전에
+					"틀리게" 만든 이름과 다르다는 성질을 가지고 있습니다. 이는
+					cwlo2F가 올바르게 만든 이름임을 함의하지 않습니다. GitHub
+					핸들과 같기도 하고, 어쨌든 블로그에 이름이 필요하기도 했고?
+				</p>
+				<p>주로 수학과 알고리즘 문제 해결에 관한 포스트를 남깁니다.</p>
+			</section>
 
-	<h2>About Kisoo KIM</h2>
-	<p>
-		김기수는 수학을 공부하는 작은 학생입니다. 수학을 잘 못한다고 상상하여
-		작다고 씁니다. 대수적 정수론에 관심이 있습니다.
-	</p>
-</Layout>
+			<section>
+				<h2>cwlo2F를 발음하는 방법</h2>
+				<p>
+					해시값을 발음하실 줄 아십니까? 저는 모르는데, 당분간은 계속
+					몰랐으면 합니다. 이래서 이름을 잘 지었어야 했는데.
+				</p>
+			</section>
+
+			<section>
+				<h2>About Kisoo KIM</h2>
+				<p>
+					김기수는 수학을 공부하는 작은 학생입니다. 수학을 잘 못한다고
+					상상하여 작다고 씁니다. 대수적 정수론에 관심이 있습니다.
+				</p>
+			</section>
+
+			<section>
+				<h2>Contact</h2>
+				<p>
+					📧 <a href="mailto:cwlo2F@gmail.com">cwlo2F@gmail.com</a><br
+					/>
+					🐙 <a href="https://github.com/cwlo2F" target="_blank"
+						>github.com/cwlo2F</a
+					>
+				</p>
+			</section>
+		</main>
+		<Footer />
+	</body>
+</html>
