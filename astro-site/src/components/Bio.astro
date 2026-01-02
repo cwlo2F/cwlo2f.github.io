@@ -1,0 +1,42 @@
+---
+// import AboutHeroImage from "../assets/blog-placeholder-about.jpg"
+const author = {
+    name: "김기수",
+    summary: "수학을 공부하는 작은 학생",
+}
+const email = "cwlo2F@gmail.com"
+---
+
+<div class="bio">
+    <a href="/about" class="bio-link">
+        <img
+            class="bio-avatar"
+            src="/images/kisoo-kim.jpeg"
+            width="50"
+            height="50"
+            alt="Kisoo KIM's profile picture"
+            loading="lazy"
+        />
+    </a>
+
+    <p>
+        <strong>{author.name}</strong>는 {author.summary}입니다.<br />
+        {email}
+    </p>
+</div>
+
+<style>
+    .bio {
+        display: flex;
+        gap: 12px;
+        align-items: center;
+        margin-top: 2rem;
+    }
+    .bio-avatar {
+        border-radius: 9999px;
+        display: block;
+    }
+    .bio-link {
+        line-height: 0;
+    }
+</style>
