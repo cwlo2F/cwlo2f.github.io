@@ -7,8 +7,9 @@ import FormattedDate from "../../components/FormattedDate.astro";
 import Header from "../../components/Header.astro";
 import { SITE_DESCRIPTION, SITE_TITLE } from "../../consts";
 
+const showDrafts = import.meta.env.DEV;
 const posts = (await getCollection("blog"))
-	.filter((post) => !post.data.draft)
+	.filter((post) => showDrafts || !post.data.draft)
 	.sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
 ---
 
@@ -58,6 +59,20 @@ const posts = (await getCollection("blog"))
 				color: rgb(var(--black));
 				line-height: 1;
 			}
+			.title--draft {
+				color: #d97706;
+			}
+			.badge {
+				display: inline-block;
+				margin-left: 0.5rem;
+				padding: 0.15rem 0.45rem;
+				border-radius: 999px;
+				border: 1px solid currentColor;
+				font-size: 0.75em;
+				line-height: 1.2;
+				opacity: 0.9;
+				vertical-align: middle;
+			}
 			.date {
 				margin: 0;
 				color: rgb(var(--gray));
@@ -103,7 +118,19 @@ const posts = (await getCollection("blog"))
 											alt=""
 										/>
 									)}
-									<h4 class="title">{post.data.title}</h4>
+									<h4
+										class:list={[
+											"title",
+											post.data.draft && "title--draft",
+										]}
+									>
+										{post.data.title}
+										{post.data.draft && (
+											<span class="badge badge--draft">
+												DRAFT
+											</span>
+										)}
+									</h4>
 									<p class="date">
 										<FormattedDate
 											date={post.data.pubDate}

@@ -9,7 +9,8 @@ import Bio from "../components/Bio.astro";
 
 type Props = CollectionEntry<"blog">["data"];
 
-const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
+const { title, description, pubDate, updatedDate, heroImage, draft } =
+	Astro.props;
 ---
 
 <html lang="ko">
@@ -53,6 +54,31 @@ const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
 			.last-updated-on {
 				font-style: italic;
 			}
+			.draft-banner {
+				margin: 1rem 0 0;
+				padding: 0.75rem 0.9rem;
+				border-radius: 14px;
+				border: 1px solid rgba(217, 119, 6, 0.55);
+				background: rgba(217, 119, 6, 0.08);
+				gap: 0.6rem;
+				align-items: center;
+			}
+			.badge {
+				display: inline-block;
+				padding: 0.15rem 0.45rem;
+				border-radius: 999px;
+				border: 1px solid currentColor;
+				font-size: 0.85rem;
+				line-height: 1.2;
+				opacity: 0.95;
+			}
+			.badge--draft {
+				color: #d97706;
+			}
+			.draft-text {
+				opacity: 0.85;
+				font-size: 0.95rem;
+			}
 		</style>
 	</head>
 
@@ -87,6 +113,22 @@ const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
 						</div>
 						<h1>{title}</h1>
 						<hr />
+						{
+							draft && (
+								<div
+									class="draft-banner"
+									role="note"
+									aria-label="Draft post"
+								>
+									<span class="badge badge--draft">
+										DRAFT
+									</span>
+									<span class="draft-text">
+										이 글은 아직 초안압니다.
+									</span>
+								</div>
+							)
+						}
 					</div>
 					<slot />
 					<div class="bio">
